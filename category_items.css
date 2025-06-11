@@ -1,0 +1,310 @@
+* {
+    /* border: 2px solid greenyellow;  */
+    box-sizing: border-box;
+    font-family: 'anton', 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* --ghost-border-lower: 0px 0px 8px 2px white, inset 0px 0px 8px 2px white; */
+    --ghost-border: 0px 0px 8px 2px white;
+    --back-transparent: rgba(208, 214, 211, 0.486);
+    --front-transparent: rgba(185, 187, 186, 0.8);
+}
+
+/*This is the horiozntal line*/
+.divider {
+    width: 40vw;
+    margin: auto;
+    box-shadow: var(--ghost-border);
+}
+
+/*Removing Scrollbar For Aesthetics*/
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-image: url("images/homeImages/starsBackground.jpg");
+    /* Replace 'path/to/your/image.jpg' with the actual path to your image file */
+    background-size: cover;
+    /* Cover the entire viewport */
+    background-position: center;
+    /* Center the background image */
+    background-repeat: no-repeat;
+    /* Do not repeat the background image */
+    margin: 0;
+    /* Remove default margin */
+    padding: 0;
+    /* Remove default padding */
+}
+
+.btn {
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+/*------------------CODE FOR CHATBOX------------------*/
+/*To Make Sure NavBar Stays On Top*/
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    height: 10vh;
+}
+
+header .navbar {
+    /* background-color: var(--back-transparent); */
+    background-color: black;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+}
+
+header #navLogo img {
+    height: 100px;
+}
+
+header .navbar #checkout .btn {
+    position: absolute;
+    right: 10%;
+    transform: translateY(-50%);
+}
+
+.bi-cart {
+    font-size: xx-large;
+}
+
+header .divider {
+    box-shadow: var(--ghost-border);
+}
+
+/*------------------CODE FOR MAIN SECTION------------------*/
+main {
+    padding-top: 100px;
+    min-height: 100vh;
+}
+
+
+
+/* mainContainer contains catagoriesContainer + itemContainer*/
+.mainContainer {
+    margin-top: 4%;
+    margin-bottom: 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: white;
+}
+
+.mainContainer .divider {
+    margin-bottom: 4%;
+    margin-top: 2%;
+}
+
+/* catagoriesContainer shows catagories */
+.catagoriesContainer {
+    height: auto;
+    width: auto;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.catagoriesContainer .image-div {
+
+    position: relative;
+    /* Add this line to make positioning relative to this container */
+    float: right;
+
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    margin-bottom: 0;
+
+    overflow: hidden;
+    border-radius: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+}
+
+.catagoriesContainer .image-div:hover {
+    /* transform: scale(1.01); */
+    border-color: white;
+    box-shadow: var(--ghost-border);
+
+}
+
+.catagoriesContainer .image-div #dp {
+    width: 100%;
+    /* Use 100% for width */
+    height: 100%;
+    /* Use 100% for height */
+    object-fit: cover;
+    /* Maintain aspect ratio and cover the container */
+    max-width: 100%;
+    /* Limit maximum width */
+    max-height: 100%;
+    /* Limit maximum height */
+    justify-content: center;
+    align-items: center;
+}
+
+.catagoriesContainer .image-div .overlay {
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    opacity: 1;
+    /* color: white; */
+    /* color: #00FFE0; */
+    color: black;
+    background-color: var(--back-transparent);
+    font-size: 20px;
+    font-weight:bold;
+    text-align: center;
+}
+
+
+/* itemContainer shows items */
+.itemContainer {
+    height: auto;
+    width: auto;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemContainer .image-div {
+
+    position: relative;
+    /* Add this line to make positioning relative to this container */
+    float: right;
+
+    width: 240px;
+    height: 240px;
+    margin: 10px;
+
+    overflow: hidden;
+    border-radius: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+}
+
+.itemContainer .image-div #dp {
+    width: 100%;
+    /* Use 100% for width */
+    height: 100%;
+    /* Use 100% for height */
+    object-fit: cover;
+    /* Maintain aspect ratio and cover the container */
+    max-width: 100%;
+    /* Limit maximum width */
+    max-height: 100%;
+    /* Limit maximum height */
+    justify-content: center;
+    align-items: center;
+}
+
+.itemContainer .image-div .overlay {
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 80%;
+    left: 0%;
+    width: 100%;
+    /* opacity: 0; */
+    color: white;
+    /* background-color: black; */
+    background-color: var(--back-transparent);
+    color: black;
+    padding: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+
+.itemContainer .image-div .add-to-cart-btn {
+    position: absolute;
+    top: 2%;
+    left: 82%;
+    padding: 8px;
+    color: white;
+    background-color: black;
+    border-radius: 12%;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    /* transition: opacity 0.3s ease-in-out; */
+}
+
+.itemContainer .image-div .add-to-cart-btn:hover {
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+}
+
+/*------------------CODE FOR MAIN FOOTER------------------*/
+
+footer {
+    width: 100%;
+    z-index: 1000;
+    height: 10vh;
+}
+
+footer .navbar {
+    /* background-color: var(--back-transparent); */
+    background-color: black;
+    overflow: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+}
+
+footer #navLogo img {
+    height: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+footer #socials i {
+    padding: 8px;
+    margin: 0 8px 0 8px;
+    color: white;
+    border-radius: 4px;
+}
+
+footer #socials i:hover {
+    color: black;
+    background-color: white;
+}

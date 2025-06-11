@@ -1,0 +1,263 @@
+* {
+    /* border: 2px solid greenyellow;  */
+    box-sizing: border-box;
+    font-family: 'anton', 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* --ghost-border-lower: 0px 0px 8px 2px white, inset 0px 0px 8px 2px white; */
+    --ghost-border: 0px 0px 8px 2px white;
+    --back-transparent: rgba(208, 214, 211, 0.486);
+    --front-transparent: rgba(185, 187, 186, 0.8);
+}
+
+/*This is the horiozntal line*/
+.divider {
+    width: 40vw;
+    margin: auto;
+    box-shadow: var(--ghost-border);
+}
+
+/*Removing Scrollbar For Aesthetics*/
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-image: url("images/homeImages/starsBackground.jpg");
+    /* Replace 'path/to/your/image.jpg' with the actual path to your image file */
+    background-size: cover;
+    /* Cover the entire viewport */
+    background-position: center;
+    /* Center the background image */
+    background-repeat: no-repeat;
+    /* Do not repeat the background image */
+    margin: 0;
+    /* Remove default margin */
+    padding: 0;
+    /* Remove default padding */
+}
+
+.btn {
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+/*------------------CODE FOR CHATBOX------------------*/
+/*To Make Sure NavBar Stays On Top*/
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    height: 10vh;
+}
+
+header .navbar {
+    /* background-color: var(--back-transparent); */
+    background-color: black;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+}
+
+header #navLogo img {
+    height: 100px;
+}
+
+header .navbar #checkout .btn {
+    position: absolute;
+    right: 10%;
+    transform: translateY(-50%);
+}
+
+.bi-cart {
+    font-size: xx-large;
+}
+
+header .divider {
+    box-shadow: var(--ghost-border);
+}
+
+/*------------------CODE FOR MAIN SECTION------------------*/
+main {
+    padding-top: 100px;
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+
+.itemContainer {
+    height: auto;
+    width: auto;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    border: 2px solid #00FFE0;
+    background-color: var(--back-transparent);
+    color: black;
+    font-size: 14px;
+    border-radius: 32px;
+    /* background-color: black; */
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.itemContainer h3{
+    font-size: 40px;
+    color: white;
+    margin-top: 18px;
+}
+
+.itemContainer .columnHolder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    width: auto;
+}
+
+.itemContainer .signupForm {
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 18px;
+}
+.itemContainer .signupForm img{
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.itemContainer .column{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+    margin-top: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+.itemContainer .input {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    /* margin: 8px; */
+    outline: none;   
+    border: none;
+}
+
+.itemContainer .btn {
+    border: 1px solid white;
+    padding: 10px;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 10px;
+    margin-bottom: 8px;
+
+    width: 120px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+}
+
+.itemContainer .btn:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.itemContainer .divider {
+    width: 80%;
+    margin-top: 2%;
+    margin-bottom: 8%;
+    border-color: white;
+    box-shadow: var(--ghost-border);
+}
+
+.backToCatagories{
+    text-align: center;
+    padding: 8px;
+    margin-top: 28px;
+    background-color: #00FFE0;
+    text-decoration: none;
+    color: black;
+    border-radius: 12px;
+    border: 2px solid #00FFE0;
+}
+.backToCatagories:hover{
+    border: 2px solid black;
+}
+
+
+
+/*------------------CODE FOR MAIN FOOTER------------------*/
+footer {
+    width: 100%;
+    z-index: 1000;
+    height: 10vh;
+}
+
+footer .navbar {
+    /* background-color: var(--back-transparent); */
+    background-color: black;
+    overflow: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+}
+
+footer #navLogo img {
+    height: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+footer #socials i {
+    padding: 8px;
+    margin: 0 8px 0 8px;
+    color: white;
+    border-radius: 4px;
+}
+
+footer #socials i:hover {
+    color: black;
+    background-color: white;
+}
